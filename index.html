@@ -10,7 +10,17 @@
       </head>
 <body>
     <main>
-        <section class="heading"></section>
-      </main>
+        <section class="heading">
+            <header class="hero">
+                <!--The loading attribute on an img element can be set to lazy to tell the browser not to fetch the image
+                     resource until it is needed (as in, when the user scrolls the image into view). 
+                     As an additional benefit, lazy loaded elements will not load until the non-lazy elements are loaded 
+                     - this means users with slow internet connections can view 
+                    the content of your page without having to wait for the images to load.-->
+                    <img src="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png" alt="freecodecamp logo" loading="lazy" class="hero-img"/>
+                    <h1 class="hero-title">OUR NEW CURRICULUM</h1>
+          <p class="hero-subtitle">Our efforts to restructure our curriculum with a more project-based focus</p>
+            </header>
+    </main>
 </body>
 </html>
