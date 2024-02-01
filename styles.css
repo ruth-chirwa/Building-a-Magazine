@@ -44,9 +44,13 @@ html{
   row-gap: 1.5rem;
   }
 
-  .text{
+  .text {
     grid-column: 2 / 3;
- }
+    font-size: 1.8rem;
+    letter-spacing:0.6px;
+    column-width: 25rem;
+    text-align: justify;
+  }
 
  .hero{
     grid-column: 1 / -1;
@@ -62,4 +66,81 @@ html{
     text-align: center;
     color: orangered;
     font-size: 8rem;
+  }
+  .hero-subtitle{
+    font-size: 2.4rem;
+    color: orangered;
+    text-align: center;
+  }
+  .author{
+    font-size: 2rem;
+    font-family: Raleway, sans-serif;
+  }
+  .author-name a:hover{
+    background-color:  #306203;
+  }
+  .publish-date{
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .social-icons {
+    display: grid;
+    position: relative;
+    left: 95%;
+    top: -40px;
+    font-size: 3rem;
+    grid-template-columns: repeat(5, 1fr);
+    /*This property takes either row or column as the first value, with an optional second value of dense. grid-auto-flow uses an auto-placement algorithm to adjust the grid layout.
+     Setting it to column will tell the algorithm to create new columns for content as needed. The dense value allows the algorithm to backtrack and fill holes in the grid with smaller items, which can result in items appearing out of order.*/
+     grid-auto-flow: column;
+     grid-auto-columns: 1fr;
+     align-items: center;
+  }
+
+  /*The ::first-letter pseudo-selector allows you to target the first letter in the text content of an element.*/
+  .first-paragraph::first-letter{
+    font-size: 6rem;
+    color: orangered;
+    float: left;
+  margin-right: 1rem;
+  }
+  hr{
+    margin: 1.5rem 0;
+    border: 1px solid rgba(120, 120, 120, 0.6);
+  }
+  .quote{
+    font-size: 2.4rem;
+    text-align: center;
+    color: #00beef;
+  }
+  .quote::before{
+    content:'" ';
+  }
+  .quote::after{
+    content:' "';
+  }
+  .text-with-images {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  .lists {
+    list-style-type: none;
+    margin-top: 2rem;
+  }
+  .lists li{
+    margin-bottom: 1.5rem;
+  }
+  .list-title, .list-subtitle{
+    color: #00beef;
+  }
+  .image-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, min-content);
+    gap: 2rem;
+    /*The place-items property can be used to set the align-items and justify-items values at the same time.
+     The place-items property takes one or two values. If one value is provided, it is used for both the align-items and justify-items properties.
+      If two values are provided, the first value is used for the align-items property and the second value is used for the justify-items property.*/
+      place-items: center;
   }
